@@ -6,7 +6,7 @@ velha.
 <font color="blue"> **Exemplo:** </font>
 * * *
 Dados da primeira pessoa:
-\nNome: <font color="red">Maria</font>
+Nome: <font color="red">Maria</font>
 Idade: <font color="red">17</font>
 
 Dados da segunda pessoa:
