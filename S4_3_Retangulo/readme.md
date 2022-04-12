@@ -2,11 +2,7 @@
 
 Fazer um programa para ler os valores da largura e altura de um retângulo. Em seguida, mostrar na tela o valor de sua área, perímetro e diagonal. Usar uma classe como mostrado no projeto abaixo.
 
-
-
-![Screenshot_1.png](../_resources/Screenshot_1.png)
-
-
+![image](https://uploaddeimagens.com.br/imagens/OhkF1-I)
 
 **Exemplo:**
 * * *
