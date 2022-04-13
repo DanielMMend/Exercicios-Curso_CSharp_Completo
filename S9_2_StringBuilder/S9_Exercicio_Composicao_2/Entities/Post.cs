@@ -16,6 +16,15 @@ namespace S9_Exercicio_Composicao_2.Entities
         {
         }
 
+        public void AddComment(Comment comment)
+        {
+            Comments.Add(comment);
+        }
+        public void RemoveComment(Comment comment)
+        {
+            Comments.Remove(comment);
+        }
+
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();

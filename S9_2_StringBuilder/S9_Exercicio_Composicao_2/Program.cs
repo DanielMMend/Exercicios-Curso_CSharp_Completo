@@ -15,8 +15,8 @@ namespace S9_Exercicio_Composicao_2
             p1.Likes = 12;
             Comment c1 = new Comment("Have a nice trip");
             Comment c2 = new Comment("Wow that's awesome!");
-            p1.Comments.Add(c1);
-            p1.Comments.Add(c2);
+            p1.AddComment(c1);
+            p1.AddComment(c2);
 
             Post p2 = new Post();
             p2.Moment = DateTime.ParseExact("28/07/2018 23:14:19", "dd/MM/yyyy HH:mm:ss", CultureInfo.InvariantCulture);
@@ -25,8 +25,8 @@ namespace S9_Exercicio_Composicao_2
             p2.Likes = 5;
             Comment c3 = new Comment("Good night");
             Comment c4 = new Comment("May the Force be with you");
-            p2.Comments.Add(c3);
-            p2.Comments.Add(c4);
+            p2.AddComment(c3);
+            p2.AddComment(c4);
 
             Console.WriteLine(p1);
             Console.WriteLine(p2);
