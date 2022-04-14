@@ -40,7 +40,7 @@ namespace S9_Exercicio_Composicao_3.Entities
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine($"Order moment: {Moment}");
+            sb.AppendLine($"Order moment: {Moment.ToString("dd/MM/yyyy hh:mm:ss")}");
             sb.AppendLine($"Order status: {Status}");
             sb.AppendLine($"Client: {Client.Name} ({Client.BirthDate:d}) - {Client.Email}");
             sb.AppendLine("Order items:");
