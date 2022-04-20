@@ -1,4 +1,6 @@
-﻿namespace S10_Exercicio_Heranca_1.Entities
+﻿using System.Globalization;
+
+namespace S10_Exercicio_Heranca_1.Entities
 {
     class Employee
     {
@@ -23,7 +25,7 @@
 
         public override string ToString()
         {
-            return $"{Name} - ${Payment():F2}";
+            return $"{Name} - ${Payment().ToString("F2", CultureInfo.InvariantCulture)}";
         }
     }
 }

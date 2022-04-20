@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using System.Collections.Generic;
 using S10_Exercicio_Heranca_1.Entities;
 
@@ -23,11 +24,11 @@ namespace S10_Exercicio_Heranca_1
                 Console.Write("Hours: ");
                 int eHours = int.Parse(Console.ReadLine());
                 Console.Write("Value per hour: ");
-                double eVPH = double.Parse(Console.ReadLine());
+                double eVPH = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
                 if (yn == "y")
                 {
                     Console.Write("Additional charge: ");
-                    double eAC = double.Parse(Console.ReadLine());
+                    double eAC = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
                     OutsourcedEmployee emp = new OutsourcedEmployee(eName, eHours, eVPH, eAC);
                     list.Add(emp);
                 }
