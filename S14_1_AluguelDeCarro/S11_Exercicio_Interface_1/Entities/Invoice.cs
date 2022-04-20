@@ -1,4 +1,6 @@
-﻿namespace S11_Exercicio_Interface_1.Entities
+﻿using System.Globalization;
+
+namespace S11_Exercicio_Interface_1.Entities
 {
     class Invoice
     {
@@ -20,9 +22,9 @@
         {
             return 
                 $"INVOICE:" +
-                $"\nBasic payment: {BasicPayment:F2}" +
-                $"\nTax: {Tax:F2}" +
-                $"\nTotal payment: {TotalPayment():F2}";
+                $"\nBasic payment: {BasicPayment.ToString("F2", CultureInfo.InvariantCulture)}" +
+                $"\nTax: {Tax.ToString("F2", CultureInfo.InvariantCulture)}" +
+                $"\nTotal payment: {TotalPayment().ToString("F2", CultureInfo.InvariantCulture)}";
         }
     }
 }

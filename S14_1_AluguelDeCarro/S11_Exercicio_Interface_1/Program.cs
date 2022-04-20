@@ -17,9 +17,9 @@ namespace S11_Exercicio_Interface_1
             Console.Write("Return (dd/MM/yyyy hh:mm): ");
             DateTime crFinish = DateTime.ParseExact(Console.ReadLine(), "dd/MM/yyyy HH:mm", CultureInfo.InvariantCulture);
             Console.Write("Enter price per hour: ");
-            double rsPPH = double.Parse(Console.ReadLine());
+            double rsPPH = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
             Console.Write("Enter price per day: ");
-            double rsPPD = double.Parse(Console.ReadLine());
+            double rsPPD = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
             //Entities
             Vehicle vehicle = new Vehicle(vModel);
