@@ -1,4 +1,6 @@
-﻿namespace S4_Exercicio_Classes_4.Entities
+﻿using System.Globalization;
+
+namespace S4_Exercicio_Classes_4.Entities
 {
     class Employee
     {
@@ -24,7 +26,7 @@
 
         public override string ToString()
         {
-            return $"{Name}, $ {NetSalary():F2}";
+            return $"{Name}, $ {NetSalary().ToString("F2", CultureInfo.InvariantCulture)}";
         }
     }
 }
