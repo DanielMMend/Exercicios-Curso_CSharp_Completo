@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 
 namespace S14_Exercicio_Interface_2.Entities
 {
@@ -15,7 +16,7 @@ namespace S14_Exercicio_Interface_2.Entities
 
         public override string ToString()
         {
-            return $"{DueDate.ToString("dd/MM/yyyy")} - {Amount:F2}";
+            return $"{DueDate.ToString("dd/MM/yyyy")} - {Amount.ToString("F2", CultureInfo.InvariantCulture)}";
         }
     }
 }

@@ -16,7 +16,7 @@ namespace S14_Exercicio_Interface_2
             Console.Write("Date (dd/MM/yyyy): ");
             DateTime cDate = DateTime.ParseExact(Console.ReadLine(), "dd/MM/yyyy", CultureInfo.InvariantCulture);
             Console.Write("Contract value: ");
-            double cValue = double.Parse(Console.ReadLine());
+            double cValue = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
             Console.Write("Enter number of installments: ");
             int installments = int.Parse(Console.ReadLine());
 

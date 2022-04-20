@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+
 namespace S14_Exercicio_Interface_2.Entities
 {
     class Contract
