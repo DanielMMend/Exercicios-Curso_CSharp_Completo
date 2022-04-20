@@ -1,4 +1,6 @@
-﻿namespace S10_Exercicio_Heranca_2.Entities
+﻿using System.Globalization;
+
+namespace S10_Exercicio_Heranca_2.Entities
 {
     class Product
     {
@@ -16,7 +18,7 @@
 
         public virtual string PriceTag()
         {
-            return $"{Name} ${Price:F2}";
+            return $"{Name} ${Price.ToString("F2", CultureInfo.InvariantCulture)}";
         }
     }
 }

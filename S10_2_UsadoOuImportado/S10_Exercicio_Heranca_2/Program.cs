@@ -22,7 +22,7 @@ namespace S10_Exercicio_Heranca_2
                 Console.Write("Name: ");
                 string pName = Console.ReadLine();
                 Console.Write("Price: ");
-                double pPrice = double.Parse(Console.ReadLine());
+                double pPrice = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
                 if (cui == "c")
                 {
                     Product prod = new Product(pName, pPrice);
@@ -31,7 +31,7 @@ namespace S10_Exercicio_Heranca_2
                 else if (cui == "i")
                 {
                     Console.Write("Customs fee: ");
-                    double pCF = double.Parse(Console.ReadLine());
+                    double pCF = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
                     ImportedProduct prod = new ImportedProduct(pName, pPrice, pCF);
                     list.Add(prod);
                 }

@@ -1,4 +1,6 @@
-﻿namespace S10_Exercicio_Heranca_2.Entities
+﻿using System.Globalization;
+
+namespace S10_Exercicio_Heranca_2.Entities
 {
     class ImportedProduct : Product
     {
@@ -17,7 +19,7 @@
         }
         public override string PriceTag()
         {
-            return $"{Name} ${TotalPrice():F2} (Customs fee: ${CustomsFee})";
+            return $"{Name} ${TotalPrice().ToString("F2", CultureInfo.InvariantCulture)} (Customs fee: ${CustomsFee})";
         }
     }
 }

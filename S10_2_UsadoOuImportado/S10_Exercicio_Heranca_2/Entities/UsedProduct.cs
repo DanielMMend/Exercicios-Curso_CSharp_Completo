@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 
 namespace S10_Exercicio_Heranca_2.Entities
 {
@@ -15,7 +16,7 @@ namespace S10_Exercicio_Heranca_2.Entities
 
         public override string PriceTag()
         {
-            return $"{Name} (used) ${Price:F2} (Manufacture date: {ManufactureDate.ToString("dd/MM/yyyy")})";
+            return $"{Name} (used) ${Price.ToString("F2", CultureInfo.InvariantCulture)} (Manufacture date: {ManufactureDate.ToString("dd/MM/yyyy")})";
         }
     }
 }
