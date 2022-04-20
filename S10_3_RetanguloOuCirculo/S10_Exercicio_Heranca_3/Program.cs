@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using System.Collections.Generic;
 using S10_Exercicio_Heranca_3.Entities;
 using S10_Exercicio_Heranca_3.Entities.Enums;
@@ -24,16 +25,16 @@ namespace S10_Exercicio_Heranca_3
                 if (rc == "r")
                 {
                     Console.Write("Width: ");
-                    double rWidth = double.Parse(Console.ReadLine());
+                    double rWidth = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
                     Console.Write("Height: ");
-                    double rHeight = double.Parse(Console.ReadLine());
+                    double rHeight = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
                     Rectangle rec = new Rectangle(sColor, rWidth, rHeight);
                     list.Add(rec);
                 }
                 else if (rc == "c")
                 {
                     Console.Write("Radius: ");
-                    double cRadius = double.Parse(Console.ReadLine());
+                    double cRadius = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
                     Circle circ = new Circle(sColor, cRadius);
                     list.Add(circ);
                 }
@@ -47,7 +48,7 @@ namespace S10_Exercicio_Heranca_3
             Console.WriteLine("\nSHAPE AREAS:");
             foreach (Shape s in list)
             {
-                Console.WriteLine(s.Area().ToString("F2"));
+                Console.WriteLine(s.Area().ToString("F2", CultureInfo.InvariantCulture));
             }
         }
     }
