@@ -1,4 +1,6 @@
-﻿namespace S6_Exercicio_Listas_2.Entities
+﻿using System.Globalization;
+
+namespace S6_Exercicio_Listas_2.Entities
 {
     class Employee
     {
@@ -21,7 +23,7 @@
 
         public override string ToString()
         {
-            return $"{Id}: {Name}, {Salary:F2}";
+            return $"{Id}: {Name}, {Salary.ToString("F2", CultureInfo.InvariantCulture)}";
         }
     }
 }

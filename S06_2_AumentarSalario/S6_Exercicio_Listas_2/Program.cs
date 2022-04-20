@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using System.Collections.Generic;
 using S6_Exercicio_Listas_2.Entities;
 
@@ -21,7 +22,7 @@ namespace S6_Exercicio_Listas_2
                 Console.Write("Name: ");
                 string eName = Console.ReadLine();
                 Console.Write("Salary: ");
-                double eSalary = double.Parse(Console.ReadLine());
+                double eSalary = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
                 Employee emp = new Employee(eId, eName, eSalary);
                 list.Add(emp);
@@ -46,7 +47,7 @@ namespace S6_Exercicio_Listas_2
             else
             {
                 Console.Write("Enter the percentage: ");
-                double percentage = double.Parse(Console.ReadLine());
+                double percentage = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
                 foreach (Employee emp in list)
                 {
