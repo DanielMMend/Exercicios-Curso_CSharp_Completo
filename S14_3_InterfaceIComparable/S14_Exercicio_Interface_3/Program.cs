@@ -13,7 +13,7 @@ namespace S14_Exercicio_Interface_3
             try
             {
                 List<Employee> list = new List<Employee>();
-                string path = @"C:\Users\danie\source\repos\Curso CSharp Completo - Exercicios\S14_Exercicio_Interface_3\S14_Exercicio_Interface_3\File\file.csv";
+                string path = @"C:\Users\danie\source\repos\Curso CSharp Completo - Exercicios\S14_3_InterfaceIComparable\S14_Exercicio_Interface_3\File\file.csv";
 
                 using (StreamReader sr = File.OpenText(path))
                 {
