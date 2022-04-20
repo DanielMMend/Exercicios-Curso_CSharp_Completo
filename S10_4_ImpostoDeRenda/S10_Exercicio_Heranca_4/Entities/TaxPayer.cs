@@ -1,4 +1,6 @@
-﻿namespace S10_Exercicio_Heranca_4.Entities
+﻿using System.Globalization;
+
+namespace S10_Exercicio_Heranca_4.Entities
 {
     abstract class TaxPayer
     {
@@ -18,7 +20,7 @@
 
         public override string ToString()
         {
-            return $"{Name}: ${Tax():F2}";
+            return $"{Name}: ${Tax().ToString("F2", CultureInfo.InvariantCulture)}";
         }
     }
 }

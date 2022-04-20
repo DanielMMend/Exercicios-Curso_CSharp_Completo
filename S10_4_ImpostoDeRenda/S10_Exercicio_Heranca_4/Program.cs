@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using System.Collections.Generic;
 using S10_Exercicio_Heranca_4.Entities;
 
@@ -21,11 +22,11 @@ namespace S10_Exercicio_Heranca_4
                 Console.Write("Name: ");
                 string tpName = Console.ReadLine();
                 Console.Write("Anual income: ");
-                double tpAI = double.Parse(Console.ReadLine());
+                double tpAI = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
                 if (ic == "i")
                 {
                     Console.Write("Health expenditures: ");
-                    double iHE = double.Parse(Console.ReadLine());
+                    double iHE = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
                     Individual ind = new Individual(tpName, tpAI, iHE);
                     list.Add(ind);
                 }
@@ -54,7 +55,7 @@ namespace S10_Exercicio_Heranca_4
             {
                 totalTax = totalTax + tp.Tax();
             }
-            Console.WriteLine($"\nTOTAL TAXES: ${totalTax:F2}");
+            Console.WriteLine($"\nTOTAL TAXES: ${totalTax.ToString("F2", CultureInfo.InvariantCulture)}");
         }
     }
 }
