@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using System.Collections.Generic;
 using System.Text;
 using S9_Exercicio_Composicao_3.Entities.Enums;
@@ -40,15 +41,19 @@ namespace S9_Exercicio_Composicao_3.Entities
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine($"Order moment: {Moment.ToString("dd/MM/yyyy hh:mm:ss")}");
+            sb.AppendLine($"Order moment: {Moment.ToString("dd/MM/yyyy HH:mm:ss")}");
             sb.AppendLine($"Order status: {Status}");
             sb.AppendLine($"Client: {Client.Name} ({Client.BirthDate:d}) - {Client.Email}");
             sb.AppendLine("Order items:");
             foreach (OrderItem oi in Items)
             {
-                sb.AppendLine($"{oi.Product.Name}, ${oi.Price:F2}, Quantity: {oi.Quantity}, Subtotal: ${oi.SubTotal():F2}");
+                sb.AppendLine(
+                    $"{oi.Product.Name}," +
+                    $" ${oi.Price.ToString("F2", CultureInfo.InvariantCulture)}," +
+                    $" Quantity: {oi.Quantity}," +
+                    $" Subtotal: ${oi.SubTotal().ToString("F2", CultureInfo.InvariantCulture)}");
             }
-            sb.AppendLine($"Total price: ${Total():F2}");
+            sb.AppendLine($"Total price: ${Total().ToString("F2", CultureInfo.InvariantCulture)}");
             return sb.ToString();
         }
     }

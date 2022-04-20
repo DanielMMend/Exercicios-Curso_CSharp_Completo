@@ -34,7 +34,7 @@ namespace S9_Exercicio_Composicao_3
                 Console.Write("Product name: ");
                 string pName = Console.ReadLine();
                 Console.Write("Product price: ");
-                double pPrice = double.Parse(Console.ReadLine());
+                double pPrice = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
                 Console.Write("Quantity: ");
                 int pQuantity = int.Parse(Console.ReadLine());
 
