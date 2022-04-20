@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 
 namespace S4_Exercicio_Classes_5.Entities
 {
@@ -34,7 +35,7 @@ namespace S4_Exercicio_Classes_5.Entities
         {
             if (FinalGrade() < 60.0)
             {
-                Console.WriteLine($"FALTARAM {60.0 - FinalGrade():F2} PONTOS");
+                Console.WriteLine($"FALTARAM {(60.0 - FinalGrade()).ToString("F2", CultureInfo.InvariantCulture)} PONTOS");
             }
         }
     }
