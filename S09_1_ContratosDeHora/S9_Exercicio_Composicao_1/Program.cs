@@ -19,7 +19,7 @@ namespace S9_Exercicio_Composicao_1
             Console.Write("Level (Junior/MidLevel/Senior): ");
             WorkerLevel wl = Enum.Parse<WorkerLevel>(Console.ReadLine());
             Console.Write("Base salary: ");
-            double wBaseSalary = double.Parse(Console.ReadLine());
+            double wBaseSalary = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
             Worker worker = new Worker(wName, wl, wBaseSalary, department);
 
@@ -32,7 +32,7 @@ namespace S9_Exercicio_Composicao_1
                 Console.Write("Date (DD/MM/YYYY): ");
                 DateTime cDate = DateTime.ParseExact(Console.ReadLine(), "dd/MM/yyyy", CultureInfo.InvariantCulture);
                 Console.Write("Value per hour: ");
-                double cVph = double.Parse(Console.ReadLine());
+                double cVph = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
                 Console.Write("Duration (hours): ");
                 int cDuration = int.Parse(Console.ReadLine());
 
@@ -47,7 +47,7 @@ namespace S9_Exercicio_Composicao_1
 
             Console.WriteLine($"\nName: {worker.Name}");
             Console.WriteLine($"Department: {worker.Department.Name}");
-            Console.WriteLine($"Income for {s[0]}/{s[1]}: {worker.Income(year, month):F2}");
+            Console.WriteLine($"Income for {s[0]}/{s[1]}: {worker.Income(year, month).ToString("F2", CultureInfo.InvariantCulture)}");
         }
     }
 }
