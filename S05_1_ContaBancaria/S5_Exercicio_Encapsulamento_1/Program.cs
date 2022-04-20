@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using S5_Exercicio_Encapsulamento_1.Entities;
 
 namespace S5_Exercicio_Encapsulamento_1
@@ -18,7 +19,7 @@ namespace S5_Exercicio_Encapsulamento_1
             if (sn == "s")
             {
                 Console.Write("Entre o valor de depósito inicial: ");
-                double initDep = double.Parse(Console.ReadLine());
+                double initDep = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
                 bAcc = new BankAccount(accNumber, accHolder, initDep);
             }
@@ -31,13 +32,13 @@ namespace S5_Exercicio_Encapsulamento_1
             Console.WriteLine(bAcc);
 
             Console.Write("\nEntre um valor para depósito: ");
-            double deposit = double.Parse(Console.ReadLine());
+            double deposit = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
             Console.WriteLine("Dados da conta atualizados: ");
             bAcc.Deposit(deposit);
             Console.WriteLine(bAcc);
 
             Console.Write("\nEntre um valor para saque: ");
-            double withdraw = double.Parse(Console.ReadLine());
+            double withdraw = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
             Console.WriteLine("Dados da conta atualizados: ");
             bAcc.Withdraw(withdraw);
             Console.WriteLine(bAcc);

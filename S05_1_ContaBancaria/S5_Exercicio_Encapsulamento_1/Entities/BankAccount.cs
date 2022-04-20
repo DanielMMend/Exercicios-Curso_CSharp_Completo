@@ -1,4 +1,6 @@
-﻿namespace S5_Exercicio_Encapsulamento_1.Entities
+﻿using System.Globalization;
+
+namespace S5_Exercicio_Encapsulamento_1.Entities
 {
     class BankAccount
     {
@@ -24,7 +26,7 @@
 
         public override string ToString()
         {
-            return $"Conta {Number}, Titular: {Holder}, Saldo: ${Balance:F2}";
+            return $"Conta {Number}, Titular: {Holder}, Saldo: ${Balance.ToString("F2", CultureInfo.InvariantCulture)}";
         }
     }
 }
