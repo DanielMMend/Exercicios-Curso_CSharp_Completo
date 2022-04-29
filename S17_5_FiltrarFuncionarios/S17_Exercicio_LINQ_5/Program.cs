@@ -12,7 +12,9 @@ namespace S17_Exercicio_LINQ_5
         static void Main(string[] args)
         {
             List<Employee> list = new List<Employee>();
-            string sourcePatch = @"C:\Users\danie\source\repos\Curso CSharp Completo - Exercicios\S17_Exercicio_LINQ_5\S17_Exercicio_LINQ_5\File\file.csv";
+            
+            Console.Write("Enter full file path: ");
+            string sourcePatch = Console.ReadLine();
 
             using (StreamReader sr = File.OpenText(sourcePatch))
             {
@@ -28,7 +30,7 @@ namespace S17_Exercicio_LINQ_5
                 }
             }
 
-            Console.Write("Enter salary: ");
+            Console.Write("\nEnter salary: ");
             double enterSalary = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
             Console.WriteLine($"\nEmail of people whose salary is more than {enterSalary.ToString("F2", CultureInfo.InvariantCulture)}:");
 
